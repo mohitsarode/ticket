@@ -1,0 +1,180 @@
+/* ===== Global Reset & Theme ===== */
+:root {
+  --primary: #4a90e2;
+  --primary-dark: #357ab8;
+  --bg: #f4f6f9;
+  --card-bg: #ffffff;
+  --text: #2d3436;
+  --muted: #7f8c8d;
+  --border: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== App Layout ===== */
+.App {
+  min-height: 100vh;
+}
+
+/* Header (replace default React header) */
+.App-header {
+  background: #1f2937;
+  color: #fff;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Remove unused React logo styles */
+.App-logo {
+  display: none;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+/* ===== Ticket Card ===== */
+.ticket-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.ticket-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Ticket title */
+.ticket-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Ticket meta info */
+.ticket-meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* ===== Form ===== */
+form {
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  outline: none;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Secondary button */
+button.secondary {
+  background: #e5e7eb;
+  color: #333;
+}
+
+button.secondary:hover {
+  background: #d1d5db;
+}
+
+/* Danger button (delete) */
+button.danger {
+  background: #e74c3c;
+}
+
+button.danger:hover {
+  background: #c0392b;
+}
+
+/* ===== Status Tags ===== */
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.status.open {
+  background: #e3f2fd;
+  color: #1e88e5;
+}
+
+.status.in-progress {
+  background: #fff3e0;
+  color: #fb8c00;
+}
+
+.status.closed {
+  background: #e8f5e9;
+  color: #43a047;
+}
+
+/* ===== Links ===== */
+.App-link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.App-link:hover {
+  text-decoration: underline;
+}
